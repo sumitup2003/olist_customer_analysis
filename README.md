@@ -36,9 +36,7 @@ customer_unique_id is used for all customer-level analysis, not customer_id. In 
 
 A real bug worth mentioning: during development, seller-level revenue (13.59M) and order-level revenue (13.22M) disagreed by ~370K, traced to one query missing the delivered-only filter that every other query already had. Fixing it and standardizing the filter across all five tools is the kind of consistency check that's easy to skip under time pressure — documenting it here on purpose.
 
-Dashboard Preview
 
-(Add screenshots here: Executive Overview, Seller Performance, Customer Segmentation pages)
 
 How to Run This Project
 Database: Install MySQL, create a database, run the loader script (python/load_to_mysql.py) to ingest the 9 raw CSVs, then run the ALTER TABLE scripts to set correct types/keys.
